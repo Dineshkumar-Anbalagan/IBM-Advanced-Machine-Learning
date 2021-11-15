@@ -1,3 +1,7 @@
+## EXPLORATORY DATA ANALYSIS FOR MACHINE LEARNING
+
+![1614776](https://user-images.githubusercontent.com/67826647/141749268-e9405aec-a4e5-466d-9a80-e0c5746bf806.jpg)
+
 This first course in the IBM Machine Learning Professional Certificate introduces you to Machine Learning and the content of the professional certificate. In this course you will realize the importance of good, quality data. You will learn common techniques to retrieve your data, clean it, apply feature engineering, and have it ready for preliminary analysis and hypothesis testing.
 
 By the end of this course you should be able to:
