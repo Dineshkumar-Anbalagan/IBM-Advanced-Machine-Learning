@@ -17,4 +17,4 @@ This course targets aspiring data scientists interested in acquiring hands-on ex
 What skills should you have?
 To make the most out of this course, you should have familiarity with programming on a Python development environment, as well as fundamental understanding of Calculus, Linear Algebra, Probability, and Statistics.
 
-<img width="1108" alt="Screenshot 2021-11-16 at 5 36 39 PM" src="https://user-images.githubusercontent.com/67826647/141982773-19a52789-0410-4818-9d95-eb0a9c05d6ce.png">
+![certificate](https://github.com/Dineshkumar-Anbalagan/IBM-Machine-Learning-Professional-Certification/blob/main/exploratory%20data%20analysis%20for%20machine%20learning/Screenshot%202021-11-16%20at%205.36.39%20PM.png)
