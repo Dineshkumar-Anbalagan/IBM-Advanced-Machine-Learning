@@ -14305,7 +14305,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -14319,6 +14319,7 @@ a.anchor-link {
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">MinMaxScaler</span><span class="p">,</span> <span class="n">RobustScaler</span>
 
 <span class="kn">from</span> <span class="nn">warnings</span> <span class="kn">import</span> <span class="n">filterwarnings</span>
+<span class="kn">import</span> <span class="nn">os</span>
 
 <span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">()</span>
@@ -14344,6 +14345,531 @@ a.anchor-link {
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>imported
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="FEATURE-DICTIONARY">FEATURE DICTIONARY<a class="anchor-link" href="#FEATURE-DICTIONARY">&#182;</a></h2>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">location1</span> <span class="o">=</span> <span class="s2">&quot;/Users/dineshkumaranbalagan/Desktop/project_datasets for IBM Machine Learning/Exploratory Data Analysis/contextCSVs/&quot;</span>
+
+<span class="n">filesnames</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">location1</span><span class="p">)</span>
+<span class="c1">#for i in filesnames:</span>
+
+<span class="k">def</span> <span class="nf">files</span><span class="p">(</span><span class="n">names</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+        <span class="n">loc</span> <span class="o">=</span> <span class="n">location1</span><span class="o">+</span><span class="n">i</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">loc</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">|==========================================================|</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+<span class="n">files</span><span class="p">(</span><span class="n">filesnames</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Road-Accident-Safety-Data-Guide.csv 
+
+    code                                  label
+0      1                            Pedal cycle
+1      2              Motorcycle 50cc and under
+2      3             Motorcycle 125cc and under
+3      4  Motorcycle over 125cc and up to 500cc
+4      5                  Motorcycle over 500cc
+5      8                  Taxi/Private hire car
+6      9                                    Car
+7     10       Minibus (8 - 16 passenger seats)
+8     11   Bus or coach (17 or more pass seats)
+9     16                           Ridden horse
+10    17                   Agricultural vehicle
+11    18                                   Tram
+12    19    Van / Goods 3.5 tonnes mgw or under
+13    20        Goods over 3.5t. and under 7.5t
+14    21          Goods 7.5 tonnes mgw and over
+15    22                       Mobility scooter
+16    23                    Electric motorcycle
+17    90                          Other vehicle
+18    97                Motorcycle - unknown cc
+19    98         Goods vehicle - unknown weight
+20    -1           Data missing or out of range
+
+|==========================================================|
+
+Urban_Rural.csv 
+
+   code        label
+0     1        Urban
+1     2        Rural
+2     3  Unallocated
+
+|==========================================================|
+
+Vehicle_Type.csv 
+
+    code                                  label
+0      1                            Pedal cycle
+1      2              Motorcycle 50cc and under
+2      3             Motorcycle 125cc and under
+3      4  Motorcycle over 125cc and up to 500cc
+4      5                  Motorcycle over 500cc
+5      8                  Taxi/Private hire car
+6      9                                    Car
+7     10       Minibus (8 - 16 passenger seats)
+8     11   Bus or coach (17 or more pass seats)
+9     16                           Ridden horse
+10    17                   Agricultural vehicle
+11    18                                   Tram
+12    19    Van / Goods 3.5 tonnes mgw or under
+13    20        Goods over 3.5t. and under 7.5t
+14    21          Goods 7.5 tonnes mgw and over
+15    22                       Mobility scooter
+16    23                    Electric motorcycle
+17    90                          Other vehicle
+18    97                Motorcycle - unknown cc
+19    98         Goods vehicle - unknown weight
+20    -1           Data missing or out of range
+
+|==========================================================|
+
+Light_Conditions.csv 
+
+   code                         label
+0     1                      Daylight
+1     4         Darkness - lights lit
+2     5       Darkness - lights unlit
+3     6        Darkness - no lighting
+4     7   Darkness - lighting unknown
+5    -1  Data missing or out of range
+
+|==========================================================|
+
+Casualty_Severity.csv 
+
+   code    label
+0     1    Fatal
+1     2  Serious
+2     3   Slight
+
+|==========================================================|
+
+Journey_Purpose.csv 
+
+   code                         label
+0     1       Journey as part of work
+1     2        Commuting to/from work
+2     3   Taking pupil to/from school
+3     4   Pupil riding to/from school
+4     5                         Other
+5     6                     Not known
+6    15     Other/Not known (2005-10)
+7    -1  Data missing or out of range
+
+|==========================================================|
+
+Local_Authority_Highway.csv 
+
+          Code                 Label
+0    S12000033         Aberdeen City
+1    S12000034         Aberdeenshire
+2    S12000041                 Angus
+3    S12000035         Argyll &amp; Bute
+4    E09000002  Barking and Dagenham
+..         ...                   ...
+202  E06000041             Wokingham
+203  E08000031         Wolverhampton
+204  E10000034        Worcestershire
+205  W06000006               Wrexham
+206  E06000014                  York
+
+[207 rows x 2 columns]
+
+|==========================================================|
+
+Casualty_Class.csv 
+
+   code            label
+0     1  Driver or rider
+1     2        Passenger
+2     3       Pedestrian
+
+|==========================================================|
+
+Ped_Movement.csv 
+
+    code                                              label
+0      0                                   Not a Pedestrian
+1      1                    Crossing from driver&#39;s nearside
+2      2  Crossing from nearside - masked by parked or s...
+3      3                     Crossing from driver&#39;s offside
+4      4  Crossing from offside - masked by  parked or s...
+5      5  In carriageway, stationary - not crossing  (st...
+6      6  In carriageway, stationary - not crossing  (st...
+7      7       Walking along in carriageway, facing traffic
+8      8      Walking along in carriageway, back to traffic
+9      9                                   Unknown or other
+10    -1                       Data missing or out of range
+
+|==========================================================|
+
+Road_Class.csv 
+
+   code                                label
+0     0  Not at junction or within 20 metres
+1     1                             Motorway
+2     2                                 A(M)
+3     3                                    A
+4     4                                    B
+5     5                                    C
+6     6                         Unclassified
+
+|==========================================================|
+
+Police_Officer_Attend.csv 
+
+   code                                              label
+0    -1                                       data missing
+1     1                                                Yes
+2     2                                                 No
+3     3  No - accident was reported using a self comple...
+
+|==========================================================|
+
+Age_Band.csv 
+
+    code    label
+0     -1  Unknown
+1      1    0 - 5
+2      2   6 - 10
+3      3  11 - 15
+4      4  16 - 20
+5      5  21 - 25
+6      6  26 - 35
+7      7  36 - 45
+8      8  46 - 55
+9      9  56 - 65
+10    10  66 - 75
+11    11  Over 75
+
+|==========================================================|
+
+Junction_Detail.csv 
+
+   code                                label
+0     0  Not at junction or within 20 metres
+1     1                           Roundabout
+2     2                      Mini-roundabout
+3     3              T or staggered junction
+4     5                            Slip road
+5     6                           Crossroads
+6     7    More than 4 arms (not roundabout)
+7     8            Private drive or entrance
+8     9                       Other junction
+9    -1         Data missing or out of range
+
+|==========================================================|
+
+Vehicle_Location.csv 
+
+    code                                              label
+0      0             On main c&#39;way - not in restricted lane
+1      1                              Tram/Light rail track
+2      2                                           Bus lane
+3      3                   Busway (including guided busway)
+4      4                   Cycle lane (on main carriageway)
+5      5  Cycleway or shared use footway (not part of  m...
+6      6                         On lay-by or hard shoulder
+7      7                   Entering lay-by or hard shoulder
+8      8                    Leaving lay-by or hard shoulder
+9      9                                 Footway (pavement)
+10    10                                 Not on carriageway
+11    -1                       Data missing or out of range
+
+|==========================================================|
+
+Local_Authority_District.csv 
+
+     code              label
+0       1        Westminster
+1       2             Camden
+2       3          Islington
+3       4            Hackney
+4       5      Tower Hamlets
+..    ...                ...
+411   937     South Ayrshire
+412   938  South Lanarkshire
+413   939           Stirling
+414   940       West Lothian
+415   941      Western Isles
+
+[416 rows x 2 columns]
+
+|==========================================================|
+
+Day_of_Week.csv 
+
+   code      label
+0     1     Sunday
+1     2     Monday
+2     3    Tuesday
+3     4  Wednesday
+4     5   Thursday
+5     6     Friday
+6     7   Saturday
+
+|==========================================================|
+
+Ped_Cross_Physical.csv 
+
+   code                                              label
+0     0   No physical crossing facilities within 50 metres
+1     1                                              Zebra
+2     4  Pelican, puffin, toucan or similar non-junctio...
+3     5        Pedestrian phase at traffic signal junction
+4     7                               Footbridge or subway
+5     8                                     Central refuge
+6    -1                       Data missing or out of range
+
+|==========================================================|
+
+Junction_Location.csv 
+
+   code                                              label
+0     0             Not at or within 20 metres of junction
+1     1  Approaching junction or waiting/parked at junc...
+2     2  Cleared junction or waiting/parked at junction...
+3     3                                 Leaving roundabout
+4     4                                Entering roundabout
+5     5                                  Leaving main road
+6     6                                 Entering main road
+7     7                            Entering from slip road
+8     8       Mid Junction - on roundabout or on main road
+9    -1                       Data missing or out of range
+
+|==========================================================|
+
+Accident_Severity.csv 
+
+   code    label
+0     1    Fatal
+1     2  Serious
+2     3   Slight
+
+|==========================================================|
+
+Vehicle_Manoeuvre.csv 
+
+    code                                label
+0      1                            Reversing
+1      2                               Parked
+2      3              Waiting to go - held up
+3      4                  Slowing or stopping
+4      5                           Moving off
+5      6                               U-turn
+6      7                         Turning left
+7      8                 Waiting to turn left
+8      9                        Turning right
+9     10                Waiting to turn right
+10    11                Changing lane to left
+11    12               Changing lane to right
+12    13  Overtaking moving vehicle - offside
+13    14  Overtaking static vehicle - offside
+14    15                Overtaking - nearside
+15    16           Going ahead left-hand bend
+16    17          Going ahead right-hand bend
+17    18                    Going ahead other
+18    -1         Data missing or out of range
+
+|==========================================================|
+
+Sex_of_Driver.csv 
+
+   code                         label
+0     1                          Male
+1     2                        Female
+2     3                     Not known
+3    -1  Data missing or out of range
+
+|==========================================================|
+
+Junction_Control.csv 
+
+   code                                label
+0     0  Not at junction or within 20 metres
+1     1                    Authorised person
+2     2                  Auto traffic signal
+3     3                            Stop sign
+4     4             Give way or uncontrolled
+5    -1         Data missing or out of range
+
+|==========================================================|
+
+Ped_Location.csv 
+
+    code                                              label
+0      0                                   Not a Pedestrian
+1      1           Crossing on pedestrian crossing facility
+2      2                 Crossing in zig-zag approach lines
+3      3                     Crossing in zig-zag exit lines
+4      4  Crossing elsewhere within 50m. of pedestrian c...
+5      5                 In carriageway, crossing elsewhere
+6      6                                On footway or verge
+7      7   On refuge, central island or central reservation
+8      8  In centre of carriageway - not on refuge, isla...
+9      9                       In carriageway, not crossing
+10    10                                   Unknown or other
+11    -1                       Data missing or out of range
+
+|==========================================================|
+
+Road_Type.csv 
+
+   code                         label
+0     1                    Roundabout
+1     2                One way street
+2     3              Dual carriageway
+3     6            Single carriageway
+4     7                     Slip road
+5     9                       Unknown
+6    12      One way street/Slip road
+7    -1  Data missing or out of range
+
+|==========================================================|
+
+Ped_Cross_Human.csv 
+
+   code                               label
+0     0              None within 50 metres 
+1     1   Control by school crossing patrol
+2     2  Control by other authorised person
+3    -1        Data missing or out of range
+
+|==========================================================|
+
+Point_of_Impact.csv 
+
+   code                         label
+0     0                Did not impact
+1     1                         Front
+2     2                          Back
+3     3                       Offside
+4     4                      Nearside
+5    -1  Data missing or out of range
+
+|==========================================================|
+
+Casualty_Type.csv 
+
+    code                                              label
+0      0                                         Pedestrian
+1      1                                            Cyclist
+2      2       Motorcycle 50cc and under rider or passenger
+3      3      Motorcycle 125cc and under rider or passenger
+4      4  Motorcycle over 125cc and up to 500cc rider or...
+5      5           Motorcycle over 500cc rider or passenger
+6      8                     Taxi/Private hire car occupant
+7      9                                       Car occupant
+8     10          Minibus (8 - 16 passenger seats) occupant
+9     11      Bus or coach occupant (17 or more pass seats)
+10    16                                        Horse rider
+11    17                      Agricultural vehicle occupant
+12    18                                      Tram occupant
+13    19  Van / Goods vehicle (3.5 tonnes mgw or under) ...
+14    20  Goods vehicle (over 3.5t. and under 7.5t.) occ...
+15    21   Goods vehicle (7.5 tonnes mgw and over) occupant
+16    22                             Mobility scooter rider
+17    23             Electric motorcycle rider or passenger
+18    90                             Other vehicle occupant
+19    97         Motorcycle - unknown cc rider or passenger
+20    98            Goods vehicle (unknown weight) occupant
+
+|==========================================================|
+
+Police_Force.csv 
+
+    code                  label
+0      1    Metropolitan Police
+1      3                Cumbria
+2      4             Lancashire
+3      5             Merseyside
+4      6     Greater Manchester
+5      7               Cheshire
+6     10            Northumbria
+7     11                 Durham
+8     12        North Yorkshire
+9     13         West Yorkshire
+10    14        South Yorkshire
+11    16             Humberside
+12    17              Cleveland
+13    20          West Midlands
+14    21          Staffordshire
+15    22            West Mercia
+16    23           Warwickshire
+17    30             Derbyshire
+18    31        Nottinghamshire
+19    32           Lincolnshire
+20    33         Leicestershire
+21    34       Northamptonshire
+22    35         Cambridgeshire
+23    36                Norfolk
+24    37                Suffolk
+25    40           Bedfordshire
+26    41          Hertfordshire
+27    42                  Essex
+28    43          Thames Valley
+29    44              Hampshire
+30    45                 Surrey
+31    46                   Kent
+32    47                 Sussex
+33    48         City of London
+34    50     Devon and Cornwall
+35    52      Avon and Somerset
+36    53        Gloucestershire
+37    54              Wiltshire
+38    55                 Dorset
+39    60            North Wales
+40    61                  Gwent
+41    62            South Wales
+42    63            Dyfed-Powys
+43    91               Northern
+44    92               Grampian
+45    93                Tayside
+46    94                   Fife
+47    95    Lothian and Borders
+48    96                Central
+49    97            Strathclyde
+50    98  Dumfries and Galloway
+
+|==========================================================|
+
 </pre>
 </div>
 </div>
